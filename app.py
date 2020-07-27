@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    string = request.args.get("bla")+""
+    string = str(request.args.get("bla"))
     #f = open('length.txt','w')
     #f.write(string)
     """#URL = 'https://www.urlvoid.com/scan/'+string
