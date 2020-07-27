@@ -30,6 +30,6 @@ def home():
     if(len(numbers)==0):
         return "0"
     return numbers[0]"""
-    return len(str)
+    return len(string)
 if __name__ == '__main__':
 	app.run(debug=True)
