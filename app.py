@@ -32,6 +32,6 @@ def home():
     if(len(numbers)==0):
         return "0"
     return numbers[0]"""
-    return str(len(string)+'\n')
+    return str(len(string))+'\n'
 if __name__ == '__main__':
 	app.run(debug=True)
