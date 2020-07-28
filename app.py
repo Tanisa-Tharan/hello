@@ -10,12 +10,15 @@ from flask import Flask,render_template,url_for,request
 import requests
 from bs4 import BeautifulSoup
 import re
+import urllib.parse
 
 app = Flask(__name__)
 
 @app.route('/',methods = ['POST'])
 def home():
     uname=request.form['username']  
+    
+    a=urllib.parse.unquote(uname)
     #f = open('length.txt','w')
     #f.write(string)
     """#URL = 'https://www.urlvoid.com/scan/'+string
@@ -32,6 +35,6 @@ def home():
     if(len(numbers)==0):
         return "0"
     return numbers[0]"""
-    return str(len(uname))+'\n'
+    return str(len(a))+'\n'
 if __name__ == '__main__':
 	app.run(debug=True)
