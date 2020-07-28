@@ -13,9 +13,9 @@ import re
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/',methods = ['POST'])
 def home():
-    string = str(request.args.post("bla"))
+    uname=request.form['username']  
     #f = open('length.txt','w')
     #f.write(string)
     """#URL = 'https://www.urlvoid.com/scan/'+string
@@ -32,6 +32,6 @@ def home():
     if(len(numbers)==0):
         return "0"
     return numbers[0]"""
-    return str(len(string))+'\n'
+    return str(len(uname))+'\n'
 if __name__ == '__main__':
 	app.run(debug=True)
